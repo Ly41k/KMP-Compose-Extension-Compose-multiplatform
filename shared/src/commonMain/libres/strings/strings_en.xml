@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Extension Compose-multiplatform</string>
+    <string name="obtained">Obtained</string>
+    <string name="repeat">Repeat</string>
+    <string name="check_out_the_order">Check out the order</string>
+    <string name="more">More</string>
+    <string name="first_option">First option</string>
+    <string name="second_option">Second option</string>
+    <string name="bottom_sheet_content">BottomSheet content</string>
+
+    <string name="cd_product">Product</string>
+</resources>

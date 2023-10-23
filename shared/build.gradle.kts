@@ -59,6 +59,8 @@ kotlin {
 
 libres {
     generatedClassName = "MainRes"
+    generateNamedArguments = true
+    baseLocaleLanguageCode = "en"
 }
 
 android {
