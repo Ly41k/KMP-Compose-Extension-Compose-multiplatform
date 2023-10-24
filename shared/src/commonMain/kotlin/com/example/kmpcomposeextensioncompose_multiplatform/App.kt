@@ -24,13 +24,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import com.example.kmpcomposeextensioncompose_multiplatform.components.card.CardView
 import com.example.kmpcomposeextensioncompose_multiplatform.components.topappbar.TopAppBarView
 import com.example.kmpcomposeextensioncompose_multiplatform.repos.OrderRepository
 import com.example.kmpcomposeextensioncompose_multiplatform.repos.OrderRepositoryImpl
 import kotlinx.coroutines.launch
-
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -40,7 +40,10 @@ internal fun App() {
     var isMenuShowed by remember { mutableStateOf(false) }
 
     val bottomSheetScaffoldState = rememberBottomSheetScaffoldState(
-        bottomSheetState = BottomSheetState(BottomSheetValue.Collapsed)
+        bottomSheetState = BottomSheetState(
+            initialValue = BottomSheetValue.Collapsed,
+            density = LocalDensity.current
+        )
     )
 
     val coroutineScope = rememberCoroutineScope()
