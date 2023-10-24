@@ -8,3 +8,22 @@ captures
 .cxx
 local.properties
 xcuserdata
+
+/local.properties
+/.idea/**
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+/.idea
+
+# IDEA/Android Studio Ignore exceptions
+!/.idea/codeStyles
+# Project icon
+!/.idea/icon.png
+
+/build
+/captures
