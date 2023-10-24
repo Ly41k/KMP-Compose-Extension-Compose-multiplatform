@@ -13,7 +13,13 @@ plugins {
     @Suppress("DSL_SCOPE_VIOLATION")
     alias(libs.plugins.jetbrainsCompose).apply(false)
     @Suppress("DSL_SCOPE_VIOLATION")
-    alias(libs.plugins.resourcesMultiplatform).apply(false)
+    alias(libs.plugins.multiplatformResources).apply(false)
+}
+
+buildscript {
+    dependencies {
+        classpath("dev.icerock.moko:resources-generator:0.23.0")
+    }
 }
 
 tasks.register("clean", Delete::class) {

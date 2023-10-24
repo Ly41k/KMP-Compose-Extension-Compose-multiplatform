@@ -13,8 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.example.kmpcomposeextensioncompose_multiplatform.MainRes
+import com.example.kmpcomposeextensioncompose_multiplatform.SharedRes
 import com.example.kmpcomposeextensioncompose_multiplatform.components.topappbar.actions.PlatformTopAppBarDropdownMenu
+import dev.icerock.moko.resources.compose.stringResource
 
 @Composable
 fun TopAppBarView(
@@ -29,13 +30,13 @@ fun TopAppBarView(
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(text = MainRes.string.app_name)
+                Text(text = stringResource(SharedRes.strings.app_name))
             }
         },
         backgroundColor = Color.White,
         actions = {
             IconButton(onClick = onMoreButtonClick) {
-                Icon(imageVector = Icons.Default.Menu, contentDescription = MainRes.string.more)
+                Icon(imageVector = Icons.Default.Menu, contentDescription = stringResource(SharedRes.strings.more))
             }
             PlatformTopAppBarDropdownMenu(
                 isMenuShowed = isMenuShowed,
