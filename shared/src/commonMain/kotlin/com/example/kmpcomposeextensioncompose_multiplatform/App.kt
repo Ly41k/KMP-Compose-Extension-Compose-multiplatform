@@ -30,6 +30,7 @@ import com.example.kmpcomposeextensioncompose_multiplatform.components.card.Card
 import com.example.kmpcomposeextensioncompose_multiplatform.components.topappbar.TopAppBarView
 import com.example.kmpcomposeextensioncompose_multiplatform.repos.OrderRepository
 import com.example.kmpcomposeextensioncompose_multiplatform.repos.OrderRepositoryImpl
+import dev.icerock.moko.resources.compose.stringResource
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -65,7 +66,7 @@ internal fun App() {
                 modifier = Modifier.fillMaxWidth().height(height = 250.dp),
                 contentAlignment = Alignment.Center
             ) {
-                Text(text = MainRes.string.bottom_sheet_content)
+                Text(text = stringResource(SharedRes.strings.bottom_sheet_content))
             }
         },
         sheetBackgroundColor = Color.LightGray,

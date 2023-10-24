@@ -1,5 +1,5 @@
 package com.example.kmpcomposeextensioncompose_multiplatform.models
 
-import io.github.skeptick.libres.images.Image
+import dev.icerock.moko.resources.ImageResource
 
-data class OrderItemModel(val products: List<Image>)
+data class OrderItemModel(val products: List<ImageResource>)

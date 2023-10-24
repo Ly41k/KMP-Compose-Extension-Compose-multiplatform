@@ -4,7 +4,10 @@ import androidx.compose.material.DropdownMenu
 import androidx.compose.material.DropdownMenuItem
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import com.example.kmpcomposeextensioncompose_multiplatform.MainRes
+
+import com.example.kmpcomposeextensioncompose_multiplatform.SharedRes
+import dev.icerock.moko.resources.compose.stringResource
+
 
 @Composable
 internal actual fun PlatformTopAppBarDropdownMenu(
@@ -13,10 +16,10 @@ internal actual fun PlatformTopAppBarDropdownMenu(
 ) {
     DropdownMenu(expanded = isMenuShowed, onDismissRequest = onDismissMenuRequest) {
         DropdownMenuItem(onClick = { }) {
-            Text(text = MainRes.string.first_option)
+            Text(text = stringResource(SharedRes.strings.first_option))
         }
         DropdownMenuItem(onClick = { }) {
-            Text(text = MainRes.string.second_option)
+            Text(text = stringResource(SharedRes.strings.second_option))
         }
     }
 }

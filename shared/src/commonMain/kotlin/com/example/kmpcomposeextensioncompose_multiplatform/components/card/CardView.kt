@@ -24,14 +24,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.kmpcomposeextensioncompose_multiplatform.MainRes
-import io.github.skeptick.libres.compose.painterResource
-import io.github.skeptick.libres.images.Image
+import com.example.kmpcomposeextensioncompose_multiplatform.SharedRes
+import dev.icerock.moko.resources.ImageResource
+import dev.icerock.moko.resources.compose.painterResource
+import dev.icerock.moko.resources.compose.stringResource
 
 @Composable
 fun CardView(
     modifier: Modifier,
-    products: List<Image>,
+    products: List<ImageResource>,
     onButtonClick: () -> Unit
 ) {
     Card(
@@ -49,13 +50,13 @@ fun CardView(
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
-                    text = MainRes.string.obtained,
+                    text = stringResource(SharedRes.strings.obtained),
                     fontWeight = FontWeight(500),
                     fontSize = 20.sp,
                     color = Color.Gray
                 )
                 Text(
-                    text = MainRes.string.repeat,
+                    text = stringResource(SharedRes.strings.repeat),
                     fontWeight = FontWeight(400),
                     fontSize = 13.sp,
                     color = Color.Blue
@@ -69,7 +70,7 @@ fun CardView(
                     items(products) { product ->
                         Image(
                             painter = painterResource(product),
-                            contentDescription = MainRes.string.cd_product,
+                            contentDescription = stringResource(SharedRes.strings.cd_product),
                             modifier = Modifier.size(56.dp)
                         )
                     }
@@ -88,7 +89,7 @@ fun CardView(
                     shape = RoundedCornerShape(16.dp)
 
                 ) {
-                    Text(text = MainRes.string.check_out_the_order)
+                    Text(text = stringResource(SharedRes.strings.check_out_the_order))
                 }
             }
         }

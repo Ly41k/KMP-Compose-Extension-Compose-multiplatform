@@ -1,6 +1,6 @@
 package com.example.kmpcomposeextensioncompose_multiplatform.repos
 
-import com.example.kmpcomposeextensioncompose_multiplatform.MainRes
+import com.example.kmpcomposeextensioncompose_multiplatform.SharedRes
 import com.example.kmpcomposeextensioncompose_multiplatform.models.OrderItemModel
 
 interface OrderRepository {
@@ -8,15 +8,7 @@ interface OrderRepository {
 }
 
 class OrderRepositoryImpl : OrderRepository {
-    override fun getMockOrderList(): List<OrderItemModel> {
-        return List(5) {
-            OrderItemModel(
-                products = listOf(
-                    MainRes.image.ic_phone,
-                    MainRes.image.ic_teapot,
-                )
-            )
-        }
-    }
+    override fun getMockOrderList(): List<OrderItemModel> =
+        List(5) { OrderItemModel(products = listOf(SharedRes.images.phone, SharedRes.images.teapot)) }
 }
 
